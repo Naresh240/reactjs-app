@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactjs-deployment
+  labels:
+    app: reactjs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reactjs
+  template:
+    metadata:
+      labels:
+        app: reactjs
+    spec:
+      containers:
+      - name: reactjs-deployment
+        image: naresh240/reactjsexample:v4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
