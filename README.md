@@ -1,23 +1,68 @@
-# React-Todo-list
+# Reactjs Application Deployment
 
-This is a React To do list app developed by me to learn and enhance my react skills.
+## Pre-requisites
 
- 
- ## Tech Stack
+```bash
+- Install Git
+- Install nodejs
+- Install Docker
+```
 
-  `React` `HTML` `CSS` `Javascript`
+## Deploy application manually
 
- ## Learnings
+1. Install Git, Nodejs and Docker
 
-  - React
-  - React hooks
-  - React props
-  - functions
-  - State management
-  - data processing
-  - Error resolving
+Install Git
 
-  ## Screen-shots
-![Screenshot 2023-08-11 215157](https://github.com/MaheshRautrao/React-Todo-list/assets/101188065/04005ab9-b684-493e-8898-afd86bbcaca0)
-![Screenshot 2023-08-11 215233](https://github.com/MaheshRautrao/React-Todo-list/assets/101188065/a9414999-bcfc-4857-9243-a2734ab3b229)
-![Screenshot 2023-08-11 215243](https://github.com/MaheshRautrao/React-Todo-list/assets/101188065/87f07eb1-ad3c-41bf-969f-3aaee0ea645c)
+```bash
+yum install git -y
+```
+
+Install Nodejs
+
+```bash
+sudo yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_13.x | sudo -E bash -
+sudo yum install -y nodejs
+```
+
+2. Build package
+
+```bash
+npm install
+```
+
+3. Deploy application
+
+```bash
+npm start
+```
+
+## Dockerize Application
+
+1. Install docker
+
+```bash
+yum install docker -y
+service docker start
+```
+
+2. Build docker image and push image to dockerhub
+
+```bash
+docker build -t naresh240/reactjsexample:v1 .
+docker login
+docker push naresh240/reactjsexample:v1
+```
+
+3. Run container
+
+```bash
+docker run --name reactjs-container -p 3000:3000 -d naresh240/reactjsexample:v1
+```
+
+![image](https://github.com/Naresh240/reactjs-app/assets/58024415/3545fde7-0774-4275-80db-9db647d4f6fa)
+
+4. Check application output
+
+![image](https://github.com/Naresh240/reactjs-app/assets/58024415/288827c6-82ce-47f1-ae60-c430f46ba88b)
