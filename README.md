@@ -12,13 +12,13 @@
 
 1. Install Git, Nodejs and Docker
 
-a. Install Git
+Install Git
 
 ```bash
 yum install git -y
 ```
 
-b. Install Nodejs
+Install Nodejs
 
 ```bash
 sudo yum install -y gcc-c++ make
